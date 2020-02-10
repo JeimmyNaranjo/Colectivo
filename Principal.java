@@ -15,13 +15,13 @@ public class Principal  //Declaracion de la clase Principal
         int capacidad,pasajeros;
     
         // Datos de salida
-        int dinero_tur,dinero_prop;
+        double dinero_tur,dinero_prop;
         double viajenec;
       
         
         //Variables adicionales
-        int Precio_pasa = 10000; // Precio por pasajero
-        int Precio_prop = 2000;  //Precio al propietario
+        double Precio_pasa = 10000; // Precio por pasajero
+        double Precio_prop = 2000;  //Precio al propietario
         
         
         
@@ -37,19 +37,23 @@ public class Principal  //Declaracion de la clase Principal
         
         // 2. Realizar calculos
         // cantidad de viajes necesarios
-        viajenec = pasajeros / capacidad;
+        double ipasajeros = (double)pasajeros;
+        double icapacidad = (double)capacidad;
+        viajenec = Math.ceil(ipasajeros / icapacidad);// Redondear
         int iviajenec = (int)viajenec; //convertir la variable double a entera
         //Pago de turistas a colectivo
-        dinero_tur = pasajeros * Precio_pasa * iviajenec;
+        dinero_tur = ipasajeros * Precio_pasa * iviajenec;
+        int idinero_tur = (int)dinero_tur;
         //Pago de conductor a propietario
         dinero_prop = Precio_prop * iviajenec;
+        int idinero_prop = (int)dinero_prop;
      
         
                   
        // 3. Mostrar datos de salida
         System.out.println("Cantidad de viajes" + iviajenec);
-        System.out.println("Dinero total a pagar por parte de los turistas" + dinero_tur);
-        System.out.println("Dinero total a pagar al propietario" + dinero_prop);
+        System.out.println("Dinero total a pagar por parte de los turistas" + idinero_tur);
+        System.out.println("Dinero total a pagar al propietario" + idinero_prop);
                                  
       
          
