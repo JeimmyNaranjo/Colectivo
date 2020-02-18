@@ -9,7 +9,7 @@ public class Principal  //Declaracion de la clase Principal
 {
     public static void main(String[] args) 
     {
-        // Datos de entrada: Ktransporte(Kilos a transportar)
+        // Datos de entrada: 
         // 1. Definicion de variables
         // Datos de entrada
         int capacidad,pasajeros;
@@ -28,9 +28,9 @@ public class Principal  //Declaracion de la clase Principal
         // Necesito acceso al teclado
         Scanner teclado = new Scanner(System.in);
         // Preguntar datos de entrada
-        System.out.print("Ingrese la capacidad del colectivo");
+        System.out.print("Ingrese la capacidad del colectivo\n");
         capacidad = teclado.nextInt();
-        System.out.print("Ingrese la cantidad de personas a transportar");
+        System.out.print("Ingrese la cantidad de personas a transportar\n");
         pasajeros = teclado.nextInt();
        
         
@@ -51,9 +51,9 @@ public class Principal  //Declaracion de la clase Principal
         
                   
        // 3. Mostrar datos de salida
-        System.out.println("Cantidad de viajes" + iviajenec);
-        System.out.println("Dinero total a pagar por parte de los turistas" + idinero_tur);
-        System.out.println("Dinero total a pagar al propietario" + idinero_prop);
+        System.out.println("Cantidad de viajes " + iviajenec);
+        System.out.println("Dinero total a pagar por parte de los turistas " + idinero_tur);
+        System.out.println("Dinero total a pagar al propietario " + idinero_prop);
                                  
       
          
